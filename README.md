@@ -1,37 +1,20 @@
-# B660+12490F+DW1560+RX588+OC9.3（Ventura EFI）
+# B660-12490F-DW1560-RX588-OC9.3-VenturaEFI
 
-#### 介绍
-CPU：i5-12490F+主板：华硕B660+显卡：蓝宝石RX588+网卡/蓝牙：BCM94352Z（DW1560）
+#### 配置
+CPU：i5-12490F
+主板：华硕B660
+显卡：蓝宝石RX588
+网卡/蓝牙：BCM94352Z（DW1560）
 
-#### 软件架构
-软件架构说明
+#### 定制
+1、CPU12代通用，如果CPU和我型号不一样可以修改\EFI\OC\config.plist 【revcpuname】改为你想显示的CPU型号；
+2、网卡/蓝牙（DW1560/DW1830, BCM94360CS2, BCM94XXXX）都能用；
+3、显卡免驱卡都能使用；
+4、USB已按照华硕B660M-T-D4主板进行定制，主板不同可以删除\EFI\OC\Kexts\USBPorts.kext文件即可；
+5、建议重新生成三码使用，不会可以跳过直接使用。
 
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+#### 主板设置
+CPU电源管理 -> CFG锁定 -> 关闭
+BOOT -> CSM -> Disabled
+BOOT -> Secure Boot -> Other OS
+BOOT -> Boot Configuration -> Fast Boot -> Disabled
